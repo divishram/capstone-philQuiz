@@ -1,0 +1,103 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Philosophy Website
+  // CSS only
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor' crossorigin='anonymous')
+  script(src='js/form.js')
+h2.text-center Start the PhilQuiz!
+h4.text-center Please try to answer as honestly as you can!
+form#formId(name='philQuiz' method='POST')       
+  .form-group
+  label(for='exampleInputEmail1') Email address
+  input#exampleInputEmail1.form-control.w-25(type='email' name='email' aria-describedby='emailHelp' placeholder='Enter email')
+  small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.  
+  .col
+  input.form-control.w-25(type='text' placeholder='First name' name='fname')
+
+  // Question 1
+  #radioGroup.form-check
+    .py-2.h5
+      b Q1. Do you believe God exists?
+    input#flexRadioDefault1.form-check-input(type='radio' name='flexRadioDefault' value='Yes')
+    label.form-check-label(for='flexRadioDefault1')
+      | Yes
+  .form-check
+    input#flexRadioDefault2.form-check-input(type='radio' name='flexRadioDefault' value='No')
+    label.form-check-label(for='flexRadioDefault2')
+      | No
+  // Question 2
+  .form-check
+    .py-2.h5
+      b Q2. What is the purpose of life?
+    input#flexRadioDefault3.form-check-input(type='radio' name='question2' value='To pursue pleasure')
+    label.form-check-label(for='flexRadioDefault3')
+      | To pursue pleasure
+  .form-check
+    input#flexRadioDefault4.form-check-input(type='radio' name='question2' value='There is no meaning')
+    label.form-check-label(for='flexRadioDefault4')
+      | There is no meaning
+  .form-check
+    input#flexRadioDefault5.form-check-input(type='radio' name='question2' value='To follow the plan set by God')
+    label.form-check-label(for='flexRadioDefault5')
+      | To follow the plan set by God
+  .form-check
+    input#flexRadioDefault6.form-check-input(type='radio' name='question2' value='To become a good person')
+    label.form-check-label(for='flexRadioDefault6')
+      | To become a good person
+  // Question 3
+  .form-check
+    .py-2.h5
+      b Q3. What is your view on ethics?
+    input#flexRadioDefault7.form-check-input(type='radio' name='question3' value='Follow the law')
+    label.form-check-label(for='flexRadioDefault7')
+      | Follow the law
+  .form-check
+    input#flexRadioDefault8.form-check-input(type='radio' name='question3' value="It's based on your own inner moral principles")
+    label.form-check-label.w-75(for='flexRadioDefault8')
+      | It&apos;s based on your own inner moral principles
+  .form-check
+    input#flexRadioDefault9.form-check-input(type='radio' name='question3' value='A forced way of thinking')
+    label.form-check-label.w-75(for='flexRadioDefault9')
+      | A forced way of thinking
+  .form-check
+    input#flexRadioDefault10.form-check-input(type='radio' name='question3' value="It's a systemic way of telling the right from the wrong")
+    label.form-check-label.w-75(for='flexRadioDefault10')
+      | It&apos;s a systemic way of telling the right from the wrong
+
+  // Question 4
+  .form-check
+    .py-2.h5
+      b Q4. Who is your favourite Philosopher?
+    input#flexRadioDefault7.form-check-input(type='radio' name='question4' value='Plato')
+    label.form-check-label(for='flexRadioDefault11')
+      | Plato
+  .form-check
+    input#flexRadioDefault8.form-check-input(type='radio' name='question4' value="Aristotle")
+    label.form-check-label.w-75(for='flexRadioDefault12')
+      | Aristotle
+  .form-check
+    input#flexRadioDefault9.form-check-input(type='radio' name='question4' value='Socrates')
+    label.form-check-label.w-75(for='flexRadioDefault13')
+      | Socrates
+  .form-check
+    input#flexRadioDefault10.form-check-input(type='radio' name='question4' value="Kant")
+    label.form-check-label.w-75(for='flexRadioDefault14')
+      | Kant
+
+    // Question 5
+  .form-check
+    .py-2.h5
+      b Q5. Do humans have free will?
+    input#flexRadioDefault7.form-check-input(type='radio' name='question5' value='Yes')
+    label.form-check-label(for='flexRadioDefault11')
+      | Yes
+  .form-check
+    input#flexRadioDefault8.form-check-input(type='radio' name='question5' value="No")
+    label.form-check-label.w-75(for='flexRadioDefault12')
+      | No
+  button.btn.btn-success.mt-3(type='submit') Submit
+// JavaScript Bundle with Popper
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2' crossorigin='anonymous')
